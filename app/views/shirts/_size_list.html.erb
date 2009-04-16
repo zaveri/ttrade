@@ -1,0 +1,10 @@
+<div class="size_list">	
+	<% form_tag filter_by_size_shirts_path do -%>
+	<ul>
+	   	<% @sizes.each do | size| %>
+	   		<%= size_list_item(size, @selected_sizes) %>
+	   	<% end %>	
+	</ul>	
+	<div id="filter_by_sizes"><%= submit_tag 'Filter' %></div>
+  <% end -%>	
+</div>

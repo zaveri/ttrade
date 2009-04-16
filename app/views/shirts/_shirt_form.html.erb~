@@ -1,0 +1,14 @@
+<div id="new_shirt_form">
+<% form_for :shirt, @shirt, :url => shirts_path, :html => { :multipart => true }  do |f| %>
+<%= error_messages_for :shirt %>
+    <p><label for="login">Image</label><br/>
+    <%=f.file_field :front %>
+    <p><label for="login">Description</label><br/>
+    <%= f.text_field :description %></p>
+    <p><label for="size">Size</label><br/>
+    <%= collection_select("shirt", "size_id", @sizes, "id", "name") %></p>
+    <p><label for="gender">Gender</label><br/>
+    <%= collection_select("shirt", "gender_id", @genders, "id", "name") %></p>
+    <p><%= submit_tag 'Post Shirt' %></p>
+<% end %>
+</div>

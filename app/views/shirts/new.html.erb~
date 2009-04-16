@@ -1,0 +1,5 @@
+<div id="shirt">
+
+<%= render :partial => "shirt_form" %>
+
+</div>

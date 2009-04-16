@@ -1,0 +1,24 @@
+a, a:link, a:visited {text-decoration:none;}
+a:hover {text-decoration:underline;}
+ul {list-style:none;}
+/*  validation */
+.validation {color:#fff;}
+.validation {font-size:1.4em;}
+.validation a {color:#fff; font-weight: bold;}
+.validation {font-size:1.0em;text-align:right;padding:1px 10px;}
+.validation ul, .validation li {display:inline;}
+.validation li {padding-left:0px;}
+
+
+
+/* design structure */
+
+#header {
+  color: #fff;
+  background: #3E3E3E;
+  border-top: 5px solid #FF4185;
+  padding: 30px 18px 0 18px;
+  }
+.clearfix {display:block;}
+
+

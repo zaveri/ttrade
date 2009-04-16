@@ -1,0 +1,10 @@
+<div class="gender_list">	
+	<% form_tag filter_by_gender_shirts_path do %>
+	<ul>
+	   	<% @genders.each do | gender| %>
+	   		<%= gender_list_item(gender, @selected_genders) %>
+	   	<% end %>	
+	</ul>	
+	<div id="filter_by_gender"><%= submit_tag 'Filter' %></div>
+  <% end %>	
+</div>

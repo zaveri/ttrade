@@ -1,0 +1,27 @@
+<div id="shirt_content">
+    <ul>
+	<li class="row">
+	   <!-- <span class="field-label">Front:</span></br> -->
+	    <span class="thumbnail"><%= image_tag @shirt.front.url(:thumb) %></span>
+	</li>
+	</br>
+	<li class="row">
+	    <span class="field-label">Description:</span>
+	    <span class="field-value"><%=  @shirt.description %></span>
+	</li>
+	<li class="row">
+	    <span class="field-label">Size:</span>
+	    <span class="field-value"><%= @shirt.size.name %></span>
+	</li>
+	<li class="row">
+	    <span class="field-label">Gender:</span>
+	    <span class="field-value"><%= @shirt.gender.name %></span>
+	</li>
+	<li class="row">
+	    <span class="field-label">User:</span>
+	    <span class="field-value"><%= link_to @shirt.user.login, profile_path(@shirt.user.profile) %></span>
+	</li>
+      <li><%=  link_to "Edit Shirt", {:action => "edit", :id => @shirt}, :method => :get if current_user == @shirt.user %></li>
+      <!-- or <%= link_to "Edit Shirt", edit_shirt_path(@shirt) if current_user == @shirt.user %> -->
+    </ul>
+</div>

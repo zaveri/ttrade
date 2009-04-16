@@ -1,0 +1,36 @@
+    <div id="sidebar">
+	<h2 class="dark">Actions</h2>
+	<div class="tool-box">
+		<h3 class="tool_title">My Profile</h3>
+		<ul>
+			<li><%= link_to "View my Profile", profile_path(current_user.profile) %></li>
+			<li><%=  link_to "Edit Profile", {:action => "edit", :id => @profile}, :method => :get  %></li>
+		</ul>
+	</div>
+	<div class="tool-box">
+		<h3 class="tool_title">Messaging</h3>
+		<ul>
+			<li><%= link_to current_user.login, profile_path(current_user.profile) %></li>
+			<li><%=  link_to "Edit Profile", {:action => "edit", :id => @profile}, :method => :get  %></li>
+		</ul>
+	</div>
+	<div class="tool-box">
+		<h3 class="tool_title">Messaging</h3>
+		<ul>
+			<li><%= link_to "Inbox", inbox_path %></li>
+			<li><%=  link_to "Compose", new_sent_path  %></li>
+		</ul>
+	</div>
+	<div class="tool-box">
+		<h3 class="tool_title">Messaging</h3>
+		<ul>
+			<li><%= link_to current_user.login, profile_path(current_user.profile) %></li>
+			<li><%=  link_to "Edit Profile", {:action => "edit", :id => @profile}, :method => :get  %></li>
+		</ul>
+	</div>
+</div>
+<div id="profile_content">
+    <%= render :controller => "profiles", :action => "show" %>
+</div>
+
+

@@ -1,0 +1,32 @@
+<% form_for  @profile do |f| %>
+<ul>
+      <li class="row">
+        <span class="field-label">Firstname</span>
+        <span class="field-value"><%=  f.text_field :firstname %></span>
+      </li>
+      <li class="row">
+        <span class="field-label">Lastname</span>
+        <span class="field-value"><%= f.text_field :lastname %></span>
+      </li>
+      
+      <li class="row">
+        <span class="field-label">Website</span>
+        <span class="field-value"><%= f.text_field :website %></span>
+      </li>
+      <li class="row">
+        <span class="field-label">Location</span>
+        <span class="field-value"><%= f.text_field :location %></span>
+      </li>
+ </ul>
+ 
+ <%= submit_tag 'Update' %>
+ 
+ <% end %>
+ 
+ <% form_for  current_user do |f| %>
+       <li class="row">
+        <span class="field-label">Email</span>
+        <span class="field-value"><%= f.text_field :email %></span>
+      </li>
+ <%= submit_tag 'Update' %>
+ <% end %>

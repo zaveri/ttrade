@@ -1,0 +1,59 @@
+<% if current_user == @profile.user %>
+<div id="sidebar">
+	<h2 class="dark">Actions</h2>
+	<div class="tool-box">
+		<h3 class="tool_title">My Profile</h3>
+		<ul>
+			<li><%= link_to "View my Profile", profile_path(current_user.profile) %></li>
+			<li><%=  link_to "Edit Profile", {:action => "edit", :id => @profile}, :method => :get  %></li>
+		</ul>
+	</div>
+	<div class="tool-box">
+		<h3 class="tool_title">Messaging</h3>
+		<ul>
+			<li><%= link_to current_user.login, profile_path(current_user.profile)  %></li>
+			<li><%=  link_to "Edit Profile", {:action => "edit", :id => @profile}, :method => :get  %></li>
+		</ul>
+	</div>
+	<div class="tool-box">
+		<h3 class="tool_title">Messaging</h3>
+		<ul>
+			<li><%= link_to "Inbox", inbox_path %></li>
+			<li><%=  link_to "Compose", new_sent_path  %></li>
+		</ul>
+	</div>
+	<div class="tool-box">
+		<h3 class="tool_title">Messaging</h3>
+		<ul>
+			<li><%= link_to current_user.login, profile_path(current_user.profile)  %></li>
+			<li><%=  link_to "Edit Profile", {:action => "edit", :id => @profile}, :method => :get  %></li>
+		</ul>
+	</div>
+</div>
+<% end %>
+<div id="profile_content">
+    <h1 class="user_name">
+	<%= link_to @profile.user.login, profile_path(@profile) %>
+    </h1>
+    <ul>
+	  <li class="row">
+	    <span class="field-label">Firstname</span>
+	    <span class="field-value"><%= @profile.firstname %></span>
+	  </li>
+	  <li class="row">
+	    <span class="field-label">Lastname</span>
+	    <span class="field-value"><%= @profile.lastname %></span>
+	  <li class="row">
+	    <span class="field-label">Website</span>
+	    <span class="field-value"><%= link_to @profile.website, @profile.website  %></span>
+	  </li>
+	  <li class="row">
+	    <span class="field-label">Location</span>
+	    <span class="field-value"><%= @profile.location %></span>
+	  </li>
+    </ul>
+<!--<%=  button_to "Edit Script", {:action => "edit", :id => @profile}, :method => :get  %> -->
+</div>
+
+
+ 

@@ -1,0 +1,36 @@
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+#flash-notice {
+background:#CCFFCC none repeat scroll 0 0;
+border:1px solid #99CC99;
+color:#4F4D56;
+font-size:13px;
+margin:5px auto 0;
+padding:0.35em;
+text-align:center;
+width:400px;
+}
+#flash-error{
+background:#FFFDDE none repeat scroll 0 0;
+border:1px solid #FFDEC1;
+color:#65706F;
+margin:5px auto 0;
+padding:0.35em;
+text-align:center;
+width:400px;
+}
+body, html {
+  font-family: gotham, arial, helvetica, sans-serif;
+  font-size: small;
+}
+

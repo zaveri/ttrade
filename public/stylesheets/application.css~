@@ -1,0 +1,51 @@
+
+#container {
+  width: 938px;
+  margin: 0 auto;
+}
+#content_body {
+  background: #E6ECCC;
+  padding: 40px;
+  overflow: auto;
+  }
+
+h3#our_shirts {
+  width: 288px;
+  height: 36px;
+  text-indent: -5000px;
+  margin: 5px 0;
+  background: #fff url(shirts.png) top left no-repeat;
+  }
+
+#footer a {
+color:#959595;
+font-size:0.9em;
+font-weight:bold;
+padding:14px 0;
+}
+
+.thumbnail {
+  width: 268px;
+  height: 255px;
+  background: #fff /*url(http://static1.shopify.com/s/files/1/0000/0820/assets/shred.gif) center center no-repeat*/;
+  float: left;
+  margin: 0 8px 16px 8px;
+  }
+.thumbnail img {
+  position: relative;
+  top: 13px;
+  left: 12px;
+  }
+.add_shirt  {
+float: right;
+color: #000;
+}
+.paginate {
+float: right;
+}
+
+
+
+
+
+

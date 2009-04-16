@@ -1,0 +1,17 @@
+#new_user_signup, #login_form {
+border:10px solid #cccccc;
+padding:20px;
+position:relative;
+width:400px;
+margin-left: auto ;
+margin-right: auto ;
+}
+
+#new_user_signup input[type="text"], input[type="password"], #login_form input[type="text"]{
+border:2px solid #cccccc;
+color:#E0007A;
+font-size:1.6667em;
+font-weight:bold;
+padding:3px;
+width: 400px;
+}

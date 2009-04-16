@@ -1,0 +1,22 @@
+<% form_for @profile do |f|	%>
+	<ul>
+	    <li class="row">
+		<%= f.label :firstname %>
+		<%= f.text_field :firstname %>
+	    </li>
+	    
+	    <li class="row">
+		<%= f.label :lastname %>
+		<%= f.text_field :lastname %>
+	    </li>
+	    <li class="row">
+		<%= f.label :website %>
+		<%= f.text_field :website %>
+	    </li>
+	    <li class="row">
+		<%= f.label :location %>
+		<%= f.text_field :location %>
+	    </li>
+	</ul>
+    <%= f.submit %>
+<% end %>
