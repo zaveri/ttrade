@@ -1,4 +1,4 @@
-class ProfilesController < ApplicationController
+class ProfilesController < ApplicationController  
   def index
   end
   
@@ -17,7 +17,6 @@ class ProfilesController < ApplicationController
   def edit
     @profile = Profile.find(current_user.profile.id)
   end
-  
   def update
     @profile = Profile.find(current_user.profile.id)
     if @profile.update_attributes(params[:profile])

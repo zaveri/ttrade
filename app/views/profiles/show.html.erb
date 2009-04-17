@@ -9,9 +9,9 @@
 		</ul>
 	</div>
 	<div class="tool-box">
-		<h3 class="tool_title">Messaging</h3>
+		<h3 class="tool_title">Shirts</h3>
 		<ul>
-			<li><%= link_to current_user.login, profile_path(current_user.profile)  %></li>
+			<li><%= link_to "Users Shirts", user_shirts_path(@profile.user)  %></li>
 			<li><%=  link_to "Edit Profile", {:action => "edit", :id => @profile}, :method => :get  %></li>
 		</ul>
 	</div>

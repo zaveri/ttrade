@@ -2,7 +2,12 @@ class ShirtsController < ApplicationController
 #   before_filter :login_required
    before_filter :login_required, :only => [:new, :edit]
   def index
-    @shirts = Shirt.find(:all)
+    if params[:user_id]
+      @user = User.find(params[:user_id])
+      @shirts = @user.shirts
+    else
+      @shirts = Shirt.find(:all)
+    end
     @genders = Gender.find(:all)
     @sizes = Size.find(:all)
     @shirts = Shirt.paginate :page => params[:page], :order => 'updated_at ASC'

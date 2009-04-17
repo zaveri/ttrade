@@ -23,5 +23,6 @@
 	</li>
       <li><%=  link_to "Edit Shirt", {:action => "edit", :id => @shirt}, :method => :get if current_user == @shirt.user %></li>
       <!-- or <%= link_to "Edit Shirt", edit_shirt_path(@shirt) if current_user == @shirt.user %> -->
+		<%= link_to "Trade Shirt", new_sent_path()%>
     </ul>
 </div>

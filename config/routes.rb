@@ -1,7 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users, :sent, :mailbox
+  map.resources :users, :has_many => :shirts
+  map.resources :sent, :mailbox
   map.resources :messages, :member => { :reply => :get }
-  map.resource :session
+  map.resource  :session
   map.resources :profiles
   map.resources :shirts, :collection => {:filter_by_size => :get}
 
