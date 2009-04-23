@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <h2>Compose</h2>
 
 <% form_for :message, :url => {:controller => "sent", :action => "create"} do |f| %>
@@ -12,4 +13,5 @@
   <p>Subject:<br /> <%= f.text_field :subject %></p>
   <p>Body:<br /> <%= f.text_area :body, :value => "I would like to trade your: for my:" %></p>
   <p><%= submit_tag "Send" %></p>
+<% end %>
 <% end %>

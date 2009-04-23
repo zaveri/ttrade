@@ -5,12 +5,12 @@
 		<h3 class="tool_title">My Profile</h3>
 		<ul>
 			<li><%= link_to "View my Profile", profile_path(current_user.profile) %></li>
-			<li><%=  link_to "Edit Profile", {:action => "edit", :id => @profile}, :method => :get  %></li>
+			<li><%=  link_to "Edit Profile", edit_profile_path(@profile) %></li>
 		</ul>
 	</div>
 	<div class="tool-box">
 		<h3 class="tool_title">Shirts</h3>
-		<ul>
+		<ul>	
 			<li><%= link_to "Users Shirts", user_shirts_path(@profile.user)  %></li>
 			<li><%=  link_to "Edit Profile", {:action => "edit", :id => @profile}, :method => :get  %></li>
 		</ul>
@@ -23,9 +23,9 @@
 		</ul>
 	</div>
 	<div class="tool-box">
-		<h3 class="tool_title">Messaging</h3>
+		<h3 class="tool_title">Preferences</h3>
 		<ul>
-			<li><%= link_to current_user.login, profile_path(current_user.profile)  %></li>
+			<li><%= link_to "Change Password", edit_profile_path(current_user.profile)  %></li>
 			<li><%=  link_to "Edit Profile", {:action => "edit", :id => @profile}, :method => :get  %></li>
 		</ul>
 	</div>
@@ -37,18 +37,18 @@
     </h1>
     <ul>
 	  <li class="row">
-	    <span class="field-label">Firstname</span>
+	    <span class="field-label">Firstname:</span>
 	    <span class="field-value"><%= @profile.firstname %></span>
 	  </li>
 	  <li class="row">
-	    <span class="field-label">Lastname</span>
+	    <span class="field-label">Lastname:</span>
 	    <span class="field-value"><%= @profile.lastname %></span>
 	  <li class="row">
-	    <span class="field-label">Website</span>
+	    <span class="field-label">Website:</span>
 	    <span class="field-value"><%= link_to @profile.website, @profile.website  %></span>
 	  </li>
 	  <li class="row">
-	    <span class="field-label">Location</span>
+	    <span class="field-label">Location:</span>
 	    <span class="field-value"><%= @profile.location %></span>
 	  </li>
     </ul>

@@ -23,6 +23,34 @@
 	</li>
       <li><%=  link_to "Edit Shirt", {:action => "edit", :id => @shirt}, :method => :get if current_user == @shirt.user %></li>
       <!-- or <%= link_to "Edit Shirt", edit_shirt_path(@shirt) if current_user == @shirt.user %> -->
-		<%= link_to "Trade Shirt", new_sent_path()%>
     </ul>
+</div>
+</br></br></br></br></br></br></br></br></br>
+<% if logged_in? %>
+<p class="propose_trade">Propose Trade</p>
+<div id="toggle_about">
+    <a href="#" onclick="Element.hide('trade_form'); return false;">Hide</a>
+    <a href="#" onclick="Element.show('trade_form'); return false;">Show</a>
+</div>
+<div id="trade_form">
+	<h2>Propose Trade</h2>
+
+	<% form_for :message, :url => {:controller => "sent", :action => "create"} do |f| %>
+
+	  	<p>
+	    To:</br>
+	    <select name="message[to][]">
+	      <%= options_from_collection_for_select([@shirt.user], :id, :login, @message.to) %>
+	    </select>
+	  </p>
+
+	  <p>Subject:<br /> <%= f.text_field :subject, :value => @shirt.description %></p>
+	  <p>Body:<br /> <%= f.text_area :body, :value => "I would like to trade the following T-Shirt:
+	 Size: #{@shirt.size.name}
+	 Description: #{@shirt.description} T-Shirt
+For the following the Shirt:", :class => "text_area_color" %></p>
+	  <p><%= submit_tag "Propose Trade" %></p>
+	<% end %>
+
+	<% end %>
 </div>

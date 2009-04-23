@@ -10,7 +10,6 @@
 <%= link_to ((image_tag shirt.front.url(:thumb)), shirt) %>
 </div>
 <% end %>
-<%= will_paginate @shirts, :class => 'paginate' %>
 
 
 <div class="size_list">	
@@ -21,5 +20,6 @@
 	   	<% end %>	
 	</ul>	
 	<div id="filter_by_size"><%= submit_tag 'Filter' %></div>
-  <% end -%>	
+  <% end %>
+<%= will_paginate @shirts, :class => 'paginate' %>
 </div>

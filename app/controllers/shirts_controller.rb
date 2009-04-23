@@ -10,7 +10,13 @@ class ShirtsController < ApplicationController
     end
     @genders = Gender.find(:all)
     @sizes = Size.find(:all)
-    @shirts = Shirt.paginate :page => params[:page], :order => 'updated_at ASC'
+    # select all sizes by default if none is selected
+    @selected_sizes = @sizes.map{|size| size.name} if @selected_sizes.blank?
+    respond_to do |format|
+      format.html
+      format.xml { render :xml => @shirts}
+      @shirts = Shirt.paginate :per_page => 6, :page => params[:page], :order => 'updated_at ASC' 
+    end
   end
   
   def new
@@ -33,6 +39,9 @@ class ShirtsController < ApplicationController
   
   def show
     @shirt = Shirt.find(params[:id])
+    if logged_in?
+    @message = current_user.sent_messages.build
+  end
   end
   
   def edit

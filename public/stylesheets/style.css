@@ -33,4 +33,11 @@ body, html {
   font-family: gotham, arial, helvetica, sans-serif;
   font-size: small;
 }
-
+.text_area_color {
+	color: #000;
+}
+.propose_trade {
+	text-decoration: underline;
+	font-weight: bold;
+	margin-bottom: 1px;
+}

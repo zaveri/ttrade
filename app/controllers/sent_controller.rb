@@ -1,5 +1,6 @@
 class SentController < ApplicationController
-
+  before_filter :login_required, :only => [:new, :edit, :index]
+  
   def index
     @messages = current_user.sent_messages.paginate :per_page => 10, :page => params[:page], :order => "created_at DESC"
   end

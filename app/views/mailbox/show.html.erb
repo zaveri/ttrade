@@ -1,5 +1,9 @@
 <h2><%=h @folder.name %></h2>
 
+<%= link_to "Inbox", inbox_path %> |
+<%= link_to "Sent", sent_index_path %> |
+<%= link_to "Compose", new_sent_path %>
+
 <table border="1">
   <tr>
     <th>From</th>

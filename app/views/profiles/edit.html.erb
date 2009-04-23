@@ -24,9 +24,11 @@
  <% end %>
  
  <% form_for  current_user do |f| %>
+<ul>
        <li class="row">
-        <span class="field-label">Email</span>
-        <span class="field-value"><%= f.text_field :email %></span>
+	        <span class="field-label">Email</span>
+	        <span class="field-value"><%= f.text_field :email %></span>
       </li>
+</ul>
  <%= submit_tag 'Update' %>
  <% end %>
