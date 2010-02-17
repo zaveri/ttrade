@@ -7,7 +7,7 @@ class Shirt < ActiveRecord::Base
   Shirt.paginate :page => 1, :order => 'created_at DESC'
   
   #paperclip plugin by thoughbot for front of shirt
-  has_attached_file :front, :styles => {:thumb => ["240x224#", :png] }
+  has_attached_file :front, :styles => {:thumb => ["240x224#", :png]}
   
   validates_presence_of :description, :gender, :size
   validates_attachment_presence :front
